@@ -20,11 +20,18 @@ def ejemplares_prestados(cod_libro):
 
 def registrar_nuevo_libro():
     nuevo_libro = l.nuevo_libro()
+
     #completar
     return None
 
-def eliminar_ejemplar_libro():
-    #completar
+def eliminar_ejemplar_libro(cod_libro):
+    for lib in libros:
+        if cod_libro == lib['cod']:
+            libro_elegido= print(f" Titulo: {lib['titulo']} \n Autor : {lib['autor']} \n Cantidad de Libros prestados: {lib['cant_ej_pr']}")
+            libros.remove(lib)
+        else:
+            libro_elegido=print("Error, el codigo no coincide con ninguno existente")
+    
     return None
 
 def prestar_ejemplar_libro(cod_libro):
@@ -49,9 +56,14 @@ def prestar_ejemplar_libro(cod_libro):
     return prestamo_libro
 
 def devolver_ejemplar_libro():
-    #completar
+    
+
+
+
+
+
     return None
 
 def nuevo_libro():
-    #completar
+
     return None

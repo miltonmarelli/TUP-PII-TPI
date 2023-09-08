@@ -27,15 +27,15 @@ while respuesta != "salir":
         elif int(opt) == 3:
             libro.nuevo_libro()
         elif int(opt) == 4:
-            #completar
-            print()
+            cod_libro = input("Ingrese el Codigo del libro: \n ")
+            bibloteca.eliminar_ejemplar_libro(cod_libro)
         elif int(opt) == 5:
             cod_libro = input("Ingrese el Codigo del libro : \n")
             bibloteca.ejemplares_prestados(cod_libro)
         elif int(opt) == 6:
             respuesta = "salir"
         else: print("Ingrese una opción válida")
-    else: 
+    else:
         print("Ingrese una opción numérica")
     
     input("Presione cualquier tecla para continuar....") # Pausa
