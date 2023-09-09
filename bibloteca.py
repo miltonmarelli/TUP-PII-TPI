@@ -55,15 +55,14 @@ def prestar_ejemplar_libro(cod_libro):
     
     return prestamo_libro
 
-def devolver_ejemplar_libro():
-    
-
-
-
-
-
+def devolver_ejemplar_libro(cod_libro):
+    for lib in libros:
+        if cod_libro == lib['cod']:
+            prestados = lib['cant_ej_pr']
+            devolucion = lib['cant_ej_ad']
+            lib['cant_ej_ad']= int(devolucion)+1
+            lib['cant_ej_pr']=int(prestados)-1
+            print("la devolucion del libro se Realizo con exito")
+            devolucion_libro= print(f" Autor :{lib['autor']} \n Titulo {lib['titulo']} \n Cant. de Ejemplares {lib['cant_ej_ad']} ")
     return None
 
-def nuevo_libro():
-
-    return None

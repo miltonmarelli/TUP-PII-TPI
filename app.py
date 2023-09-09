@@ -22,7 +22,8 @@ while respuesta != "salir":
             cod_libro = input("Ingrese el Codigo del libro: \n ")
             bibloteca.prestar_ejemplar_libro(cod_libro)
         elif int(opt) == 2:
-            #completar
+            cod_libro = input("Ingrese el Codigo del libro: \n ")
+            bibloteca.devolver_ejemplar_libro(cod_libro)
             print()
         elif int(opt) == 3:
             libro.nuevo_libro()
